@@ -1,0 +1,40 @@
+.navbar{
+    width: 100%;
+   /* position: fixed; */
+}
+
+.navbar_content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #ededed;
+    padding: 1rem 2.5rem;
+    align-items: center;
+}
+
+.navbar_logo_container{
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.navbar_logo{
+    width: 200px;
+}
+
+.navbar_menu{
+    display: flex;
+   
+}
+
+.navbar_item a{
+    padding: 1.1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: color .3s ease-in-out;
+}
+
+.navbar_item a:hover{
+    color: blue;
+}
+

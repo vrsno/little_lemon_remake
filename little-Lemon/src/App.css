@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: "Prompt", sans-serif;
+  font-size: 1.25rem;
+}
+
+
+body{
+  background-color: #fff;
+  position: relative;
+ 
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+
+
