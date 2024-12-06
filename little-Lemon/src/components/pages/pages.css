@@ -1,0 +1,8 @@
+.container{
+    background-color: gray;
+    text-align: center;
+}
+
+.container h2{
+    padding: 10px;
+}

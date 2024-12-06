@@ -1,5 +1,7 @@
 import "./nav.css"
 import littlelemon_logo from "../assets/littlelemon_logo.png"
+import { Link } from "react-router-dom"
+
 
 export function Nav(){
     return(
@@ -9,12 +11,12 @@ export function Nav(){
             <img className="navbar_logo" src={littlelemon_logo} alt="little lemon logo" />
             </div>
             <ul className="navbar_menu">
-                <li className="navbar_item"><a href="Home">Home</a></li>
-                <li className="navbar_item" ><a href="About">About</a></li>
-                <li className="navbar_item"><a href="Menu">Menu</a></li>
-                <li className="navbar_item"><a href="Reservations">Reservations</a></li>
-                <li className="navbar_item"><a href="Order-Online">Order Online</a></li>
-                <li className="navbar_item"><a href="Login">Login</a></li>
+                <li className="navbar_item"><Link to="/">Home</Link></li>
+                <li className="navbar_item" ><Link to="/about">About</Link></li>
+                <li className="navbar_item"><Link to="/menu">Menu</Link></li>
+                <li className="navbar_item"><Link to="/reservation">Reservations</Link></li>
+                <li className="navbar_item"><Link to="/order-online">Order Online</Link></li>
+                <li className="navbar_item"><Link to="/login">Login</Link></li>
             </ul>
             </div>
         </nav>
