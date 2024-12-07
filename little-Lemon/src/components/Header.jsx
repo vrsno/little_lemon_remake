@@ -8,7 +8,7 @@ export function Header(){
                 <h1 className='header_title'>Little Lemon</h1>
                 <h2 className='header_sub'>Chicago</h2>
                 <p className='header_para'>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist</p>
-                <button className='header_btn' >Reserve a Table</button>
+                <button className='header_btn btn-def' >Reserve a Table</button>
                 <div className="header_logo_container">
             <img className='header_img' src={food1} alt="food" />
             </div>

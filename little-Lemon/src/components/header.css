@@ -8,10 +8,11 @@
     color: #fff;
     padding: 20px 0;
     align-items: center;
+    margin-bottom: 8rem;
 }
 
 .header_right{
-    width: 26%;
+    width: 30%;
 }
 
 .header_container{
@@ -36,12 +37,23 @@
     margin-bottom: 20px;
 }
 
-.header_btn{
+.btn-def{
     padding: 10px 25px;
     border-radius: 20px;
     border: none;
     background-color: rgb(255, 218, 5);
     margin-top: 5px;
+    cursor: pointer;
+}
+
+.header_btn{
+    background-color: rgb(255, 218, 5);
+    transition: all .3s ease-in-out;
+}
+
+.header_btn:hover{
+    background-color: rgb(202, 172, 4);
+    transform: scale(0.9);
 }
 
 .header_logo_container{
