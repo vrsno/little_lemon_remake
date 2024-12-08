@@ -1,9 +1,5 @@
-import "../pages/pages.css"
+import { BookingPage } from "../formulary/BookingPage";
 
-export function Reservation(){
-    return(
-        <div className="container">
-            <h2>Reservation</h2>
-        </div>
-    )
+export function Reservation() {
+  return <BookingPage />;
 }
