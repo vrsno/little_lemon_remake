@@ -1,0 +1,45 @@
+[
+    {
+      "photo": "https://i.pinimg.com/474x/31/ec/2c/31ec2ce212492e600b8de27f38846ed7.jpg",
+      "testimonial": {
+        "person": "Sophia Martinez",
+        "message": "The Greek salad was fresh and delicious! The feta cheese and olives added the perfect flavors to the crisp vegetables. A must-try for any salad lover!"
+      }
+    },
+    {
+      "photo": "https://i.pinimg.com/474x/31/ec/2c/31ec2ce212492e600b8de27f38846ed7.jpg",
+      "testimonial": {
+        "person": "James Wilson",
+        "message": "The bruschetta was amazing! The toasted bread was perfectly crunchy, and the combination of tomatoes, basil, and garlic was full of flavor. It was the perfect appetizer!"
+      }
+    },
+    {
+      "photo": "https://i.pinimg.com/474x/31/ec/2c/31ec2ce212492e600b8de27f38846ed7.jpg",
+      "testimonial": {
+        "person": "Olivia Johnson",
+        "message": "This lemon dessert was absolutely divine! The tangy lemon flavor balanced perfectly with the sweetness. It was a refreshing and light way to end the meal."
+      }
+    },
+    {
+      "photo": "https://i.pinimg.com/474x/31/ec/2c/31ec2ce212492e600b8de27f38846ed7.jpg",
+      "testimonial": {
+        "person": "David Smith",
+        "message": "The spaghetti was perfectly cooked and the sauce was rich and flavorful. The fresh basil on top really enhanced the dish. It was a delightful meal!"
+      }
+    },
+    {
+      "photo": "https://i.pinimg.com/474x/31/ec/2c/31ec2ce212492e600b8de27f38846ed7.jpg",
+      "testimonial": {
+        "person": "Emma Brown",
+        "message": "This chocolate cake was heavenly! Moist, rich, and just the right amount of sweetness. Every bite melted in my mouth. A perfect dessert for any chocolate lover."
+      }
+    },
+    {
+      "photo": "https://i.pinimg.com/474x/31/ec/2c/31ec2ce212492e600b8de27f38846ed7.jpg",
+      "testimonial": {
+        "person": "Lucas Green",
+        "message": "The Caesar salad was crisp and flavorful! The dressing was perfectly creamy, and the croutons added a nice crunch. One of the best salads I've ever had!"
+      }
+    }
+  ]
+  

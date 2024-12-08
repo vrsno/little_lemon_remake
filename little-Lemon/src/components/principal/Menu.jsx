@@ -1,7 +1,6 @@
 import greekSalad from "../../assets/greek-salad.webp";
 import bruschetta from "../../assets/bruschetta.jpg";
 import lemonDesert from "../../assets/lemon-dessert.jpg";
-import "./principal.css";
 
 export function Menu() {
   return (
