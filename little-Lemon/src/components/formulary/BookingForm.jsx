@@ -1,44 +1,30 @@
 import { useState, useEffect } from "react";
 
+// Componente de formulario de reserva
 export function BookingForm() {
   const [reservationDate, setReservationDate] = useState("");
   const [reservationTime, setReservationTime] = useState("");
-  const [numberOfGuests, setNumberOfGuests] = useState();
+  const [numberOfGuests, setNumberOfGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
-  const [availableTimes, setAvailableTimes] = useState([
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ]);
+  const [availableTimes, setAvailableTimes] = useState([]);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [formError, setFormError] = useState("");
-  const [isSubmit, SetIsSubmit] = useState(false);
+  const [isSubmit, setIsSubmit] = useState(false);
 
-  // Simulando la actualización de los horarios disponibles según la fecha seleccionada
+  // Llamada a la API para obtener los horarios disponibles basados en la fecha seleccionada
   useEffect(() => {
     if (reservationDate) {
-      const fetchAvailableTimes = () => {
-        if (reservationDate === "2024-12-24") {
-          setAvailableTimes(["17:00", "18:00", "19:00"]);
-        } else {
-          setAvailableTimes([
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00",
-            "22:00",
-          ]);
-        }
-      };
+      // Convertir el valor de la fecha en un objeto Date
+      const date = new Date(reservationDate);
 
-      fetchAvailableTimes();
+      // Llamar a fetchAPI para obtener los horarios disponibles para esa fecha
+      const times = fetchAPI(date);
+      setAvailableTimes(times);
     }
   }, [reservationDate]);
+  console.log(reservationDate);
 
+  // Funciones para manejar los cambios de los campos del formulario
   const handleDateChange = (e) => {
     setReservationDate(e.target.value);
   };
@@ -55,19 +41,19 @@ export function BookingForm() {
     setOccasion(e.target.value);
   };
 
-  // Verificación del formulario antes de submit
+  // Función de manejo de envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Verificar que todos los campos estén completos
     if (!reservationDate || !reservationTime || !numberOfGuests || !occasion) {
       setFormError("Please fill in all the fields before submitting.");
-      return; // No se procesa la reserva si falta algún campo
+      return; // Si falta algún campo, no procesamos la reserva
     }
 
-    // Si todo está completo, mostramos el mensaje de confirmación
+    // Si todo está correcto, mostrar el mensaje de confirmación
     setShowConfirmation(true);
-    SetIsSubmit(true);
+    setIsSubmit(true);
     setFormError(""); // Limpiar cualquier mensaje de error
   };
 
@@ -97,11 +83,15 @@ export function BookingForm() {
           value={reservationTime}
           onChange={handleTimeChange}
         >
-          {availableTimes.map((time) => (
-            <option key={time} value={time}>
-              {time}
-            </option>
-          ))}
+          {availableTimes.length > 0 ? (
+            availableTimes.map((time) => (
+              <option key={time} value={time}>
+                {time}
+              </option>
+            ))
+          ) : (
+            <option value="">No available times</option> // Mostrar un mensaje si no hay horas disponibles
+          )}
         </select>
 
         <label htmlFor="guests">Number of guests</label>
@@ -124,7 +114,7 @@ export function BookingForm() {
         <input
           type="submit"
           value="Make Your reservation"
-          disabled={isSubmit}
+          disabled={isSubmit} // Deshabilitar el botón si ya se envió la reserva
         />
       </form>
 
