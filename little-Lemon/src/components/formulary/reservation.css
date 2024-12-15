@@ -1,0 +1,52 @@
+.booking-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    min-width: 70vw;
+    
+    place-items: center;
+    
+}
+
+.booking-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    text-align: left;
+    color: #fff;
+    
+}
+
+.booking-group label{
+    font-size: .8rem;
+    font-weight: 900;
+    margin-bottom: 7px;
+}
+
+.booking-group input{ 
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px #2222;
+    height: 60px;
+    text-align: center;
+    background-color: #ededed;
+    color: gray;
+}
+
+.booking-group select{
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px #2222;
+    height: 60px;
+    text-align: center;
+    background-color: #ededed;
+    color: gray;
+}
+
+.booking-btn {
+    grid-column: span 2;
+    height: 60px;
+}
+

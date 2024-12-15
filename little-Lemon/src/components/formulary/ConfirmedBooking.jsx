@@ -1,10 +1,23 @@
 export function ConfirmedBooking() {
+  const reservationData = JSON.parse(localStorage.getItem("reservationData"));
+
+  if (!reservationData) {
+    return <div>No reservation found.</div>;
+  }
+
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <h2>Reservation Confirmed!</h2>
+    <div>
       <p>
-        Your reservation has been successfully made. Thank you for choosing
-        Little Lemon.
+        <strong>Date:</strong> {reservationData.reservationDate}
+      </p>
+      <p>
+        <strong>Time:</strong> {reservationData.reservationTime}
+      </p>
+      <p>
+        <strong>Guests:</strong> {reservationData.numberOfGuests}
+      </p>
+      <p>
+        <strong>Occasion:</strong> {reservationData.occasion}
       </p>
     </div>
   );
