@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ConfirmedBooking } from "../formulary/ConfirmedBooking";
+import "./pages.css";
 
 export function ConfirmedReservation({ children }) {
   const [FName, setFName] = useState("");
@@ -42,8 +43,12 @@ export function ConfirmedReservation({ children }) {
   //   datos
 
   return (
-    <section className="Confirmed-reservation" style={{ marginTop: "20px" }}>
-      <form action="" onSubmit={handleSubmit}>
+    <section className="Confirmed-reservation">
+      <form
+        className="confirmed-reservation-form"
+        action=""
+        onSubmit={handleSubmit}
+      >
         <label htmlFor="FName">First Name</label>
         <input
           type="text"
@@ -93,6 +98,7 @@ export function ConfirmedReservation({ children }) {
           id="PNumber"
           min="1"
           max="9999999999"
+          placeholder="999 999"
           value={PNumber.numero}
           onChange={handleNumberChange}
           required
